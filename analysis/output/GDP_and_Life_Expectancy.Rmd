@@ -1,0 +1,42 @@
+---
+title: "GDP and Life Expectancy"
+author: "Evan Stockmoe"
+date: "2023-10-23"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Canada
+Figure 1 shows that life expectancy has been increasing over time in Canada. That is good.
+
+Figure 2 shows that Canada’s GDP per capita is also increasing over time. Go Canada!
+
+I wonder if these two data are correlated?
+
+![](Life_Expectancy_Canada_1952_1967.pdf)
+
+![](GDP_Per_Capita_Canada_1952_1967.pdf)
+
+# Life Expectancy and GDP
+The objective of this analysis is to test whether GDP per capita leads to higher life expectancy. We hypothesize
+that the relationship between GDP per capita and life expectancy is positive. We regress life expectancy
+from 140 countries on GDP per capita to test our hypothesis. The results are displayed in Table 1.
+
+```{r, results='asis',include = FALSE}
+cat(readLines("regression_summary.tex"), sep = "\n")
+```
+
+The coefficient on gdpPercap is positive and statistically significant at 0.05, which indicates that for
+every $10,000 increase in GDP per capita, life expectancy increases by five years.
+
+We can conclude that by continually increasing GDP we can increase life expectancy.
+
+Further research should focus on the nonlinear relationship between life expectancy and GDP per capita.
+
+
+
+
