@@ -26,7 +26,7 @@ The objective of this analysis is to test whether GDP per capita leads to higher
 that the relationship between GDP per capita and life expectancy is positive. We regress life expectancy
 from 140 countries on GDP per capita to test our hypothesis. The results are displayed in Table 1.
 
-```{r, results='asis',include = FALSE}
+```{r, results='asis'}
 cat(readLines("regression_summary.tex"), sep = "\n")
 ```
 
